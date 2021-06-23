@@ -40,10 +40,9 @@ a:hover {
   width: 20%;
   margin: 0 2%;
   position: relative;
-  border: #4b606b 2px solid;
 }
 
-.header .logo:hover {
+.header .logo:hover h1 {
   -webkit-animation: bigger;
           animation: bigger;
   -webkit-animation-duration: 5s;
@@ -85,12 +84,13 @@ a:hover {
   height: 80%;
   position: absolute;
   top: 15%;
+  font-size: 33px;
 }
 
 .header .menus {
   justify-items: center;
   width: 80%;
-  display: inline-block;
+  display: none;
 }
 
 .header .menus .menu-list {
@@ -108,6 +108,29 @@ a:hover {
 
 .header .menus .menu-list li {
   border-right: black 2px;
+}
+
+.header .menu-bar-wrapper {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  right: 0;
+}
+
+.header .menu-bar-wrapper .menu-bar {
+  right: 0;
+  top: 15%;
+  position: absolute;
+  padding-right: 10%;
+}
+
+.header .menu-bar-wrapper .menu-bar span {
+  background-color: black;
+  height: 5px;
+  width: 30px;
+  margin: 10px 0;
+  display: block;
+  border-radius: 15%;
 }
 
 .block1 {
@@ -128,6 +151,21 @@ a:hover {
 
 .block1_wrapper_background img {
   width: 100%;
-  height: 100%;
+  height: 90vh;
+}
+
+@media screen and (min-width: 601px) {
+  .header .menus {
+    display: block;
+  }
+  .header .menu-bar-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .header .logo {
+    border: #4b606b 2px solid;
+  }
 }
 /*# sourceMappingURL=stylesheet.css.map */
