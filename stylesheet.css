@@ -1,0 +1,697 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+.world {
+  width: 100%;
+  height: 100%;
+}
+
+.world-wrapper {
+  margin: 0 auto;
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes bigger {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  90% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bigger {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  90% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate {
+  80% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  80% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  margin: 0 auto;
+  background-color: #94A5A4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header .logo {
+  width: 50%;
+  margin: 0 2%;
+  position: relative;
+}
+
+.header .logo:hover img {
+  -webkit-animation: bigger;
+          animation: bigger;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.header .logo img {
+  margin: 0 auto;
+  padding: 0 5%;
+  /* width: 80%; */
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  left: 16%;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+}
+
+.header .menus {
+  justify-items: center;
+  width: 80%;
+  display: none;
+}
+
+.header .menus .menu-list {
+  margin: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .menus .menu-list li {
+  border-right: black 2px;
+}
+
+.header .menu-bar-wrapper {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  right: 0;
+}
+
+.header .menu-bar-wrapper .menu-bar {
+  right: 0;
+  top: 15%;
+  position: absolute;
+  padding-right: 10%;
+}
+
+.header .menu-bar-wrapper .menu-bar span {
+  background-color: black;
+  height: 3px;
+  width: 30px;
+  margin: 10px 0;
+  display: block;
+  border-radius: 15%;
+}
+
+.block1 {
+  margin: 0 auto;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+
+.block1_wrapper {
+  height: 85%;
+  background-color: white;
+}
+
+.block1_wrapper_background {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.block1_wrapper_background .block1_title {
+  width: 100%;
+  height: 100%;
+}
+
+.block1_wrapper_background .block1_title:hover img {
+  -webkit-animation: rotate;
+          animation: rotate;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.block1_wrapper_background .block1_title img {
+  width: 30%;
+  position: absolute;
+  top: 40%;
+}
+
+.block2 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block2_wrapper .block2_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block2_wrapper .block2_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block2_wrapper .block2_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block2_wrapper .block2_container img {
+  width: 100%;
+}
+
+.block2_wrapper .block2_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block2_wrapper .block2_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+.block3 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block3_wrapper .block3_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block3_wrapper .block3_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block3_wrapper .block3_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block3_wrapper .block3_container img {
+  width: 100%;
+}
+
+.block3_wrapper .block3_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block3_wrapper .block3_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+.block4 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block4_wrapper .block4_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block4_wrapper .block4_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block4_wrapper .block4_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block4_wrapper .block4_container img {
+  width: 100%;
+}
+
+.block4_wrapper .block4_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block4_wrapper .block4_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+.block5 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block5_wrapper .block5_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block5_wrapper .block5_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block5_wrapper .block5_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block5_wrapper .block5_container img {
+  width: 100%;
+}
+
+.block5_wrapper .block5_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block5_wrapper .block5_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+.block6 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block6_wrapper .block6_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block6_wrapper .block6_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block6_wrapper .block6_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block6_wrapper .block6_container img {
+  width: 100%;
+}
+
+.block6_wrapper .block6_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block6_wrapper .block6_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+.block7 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block7_wrapper .block7_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block7_wrapper .block7_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block7_wrapper .block7_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block7_wrapper .block7_container img {
+  width: 100%;
+}
+
+.block7_wrapper .block7_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block7_wrapper .block7_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+.block8 {
+  padding: 3% 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.block8_wrapper .block8_container {
+  margin: 0 auto;
+  width: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.block8_wrapper .block8_container:hover .cover {
+  display: block;
+  background: black;
+  opacity: 0.1;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  -webkit-animation: showUp;
+          animation: showUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.block8_wrapper .block8_container:hover p {
+  display: block;
+  opacity: 1;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+.block8_wrapper .block8_container img {
+  width: 100%;
+}
+
+.block8_wrapper .block8_container .cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.1;
+}
+
+.block8_wrapper .block8_container p {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  top: 30%;
+  left: 4%;
+  color: white;
+}
+
+@media screen and (max-width: 481px) {
+  .header .logo img {
+    left: 51%;
+  }
+  .block1 {
+    height: 18vh;
+  }
+  .block2_wrapper .block2_container {
+    width: 89%;
+  }
+  .block3wrapper .block3container {
+    width: 89%;
+  }
+  .block3_wrapper .block3_container {
+    width: 89%;
+  }
+  .block4_wrapper .block4_container {
+    width: 89%;
+  }
+  .block5_wrapper .block5_container {
+    width: 89%;
+  }
+  .block6_wrapper .block6_container {
+    width: 89%;
+  }
+  .block7_wrapper .block7_container {
+    width: 89%;
+  }
+  .block8_wrapper .block8_container {
+    width: 89%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .header .menus {
+    display: block;
+  }
+  .header .menu-bar-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .header .logo {
+    border-bottom: #4b606b 5px solid;
+    width: 260px;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
