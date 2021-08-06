@@ -8,7 +8,6 @@ btn.addEventListener("click", ()=>{
 });
 
 
-
 // ここからスライダー
 document.addEventListener('DOMContentLoaded', function () {
     const hero = new HeroSlider('.swiper-container');
@@ -53,4 +52,52 @@ class HeroSlider {
         this.swiper.autoplay.stop();
     }
 }
+
+
+//スクロール
+window.addEventListener('scroll',()=>{
+    let scroll = document.documentElement.scrollTop;
+    console.log(scroll);
+    document.querySelector('#scrollValue').textContent = scroll;
+
+    if (scroll >= 80){
+        let block2 = document.querySelector('.block2');
+        block2.classList.add('show');
+
+        if(scroll >= 260){
+            let block3 = document.querySelector('.block3');
+            block3.classList.add('show');
+
+            if(scroll>= 510){
+                let block4 = document.querySelector('.block4');
+                block4.classList.add('show');
+
+                if(scroll >= 740){
+                    let block5 = document.querySelector('.block5');
+                    block5.classList.add('show');  
+                    
+                    if(scroll >= 950){
+                        let block6 = document.querySelector('.block6');
+                        block6.classList.add('show'); 
+                        
+                        if(scroll >= 1220){
+                            let block7 = document.querySelector('.block7');
+                            block7.classList.add('show');   
+
+                            if(scroll >= 1450){
+                                let block7 = document.querySelector('.block7');
+                                block7.classList.add('show');   
+
+                                if(scroll >= 1450){
+                                    let block8 = document.querySelector('.block8');
+                                    block8.classList.add('show');   
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+});
 

@@ -21,6 +21,18 @@ a:hover {
   color: white;
 }
 
+#scrollValue {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #bbbbbb;
+  z-index: 200;
+}
+
 #global-container {
   width: 100%;
   height: 100%;
@@ -253,6 +265,7 @@ a:hover {
 }
 
 #global-container .mobile-menu > img {
+  display: none;
   opacity: 0;
   width: 100%;
 }
@@ -276,6 +289,7 @@ a:hover {
   position: absolute;
   left: -6%;
   opacity: 1;
+  display: block;
 }
 
 #global-container {
@@ -543,6 +557,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block2.show {
+  opacity: 1;
 }
 
 .block2_wrapper .block2_container {
@@ -602,6 +623,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block3.show {
+  opacity: 1;
 }
 
 .block3_wrapper .block3_container {
@@ -661,6 +689,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block4.show {
+  opacity: 1;
 }
 
 .block4_wrapper .block4_container {
@@ -720,6 +755,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block5.show {
+  opacity: 1;
 }
 
 .block5_wrapper .block5_container {
@@ -779,6 +821,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block6.show {
+  opacity: 1;
 }
 
 .block6_wrapper .block6_container {
@@ -838,6 +887,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block7.show {
+  opacity: 1;
 }
 
 .block7_wrapper .block7_container {
@@ -897,6 +953,13 @@ a:hover {
   height: 100%;
   margin: 0 auto;
   font-size: 0;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.block8.show {
+  opacity: 1;
 }
 
 .block8_wrapper .block8_container {
