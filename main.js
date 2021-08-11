@@ -101,3 +101,18 @@ window.addEventListener('scroll',()=>{
     }
 });
 
+
+// 水滴
+let drop = document.querySelector('.drop');
+let value = 150;
+let dropStyle = {
+            width: `${value}px`,
+            height: '150px',
+}
+window.addEventListener('scroll', ()=>{
+    let scroll = document.documentElement.scrollTop;
+    if(scroll / 5 >= 150){
+        let showScroll = document.documentElement.scrollTop;
+        drop.style.width = `${showScroll / 5}px`;
+    }
+});
