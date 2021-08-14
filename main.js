@@ -59,6 +59,7 @@ window.addEventListener('scroll',()=>{
     let scroll = document.documentElement.scrollTop;
     console.log(scroll);
     document.querySelector('#scrollValue').textContent = scroll;
+    document.querySelector('.rotate-title').classList.add('active');
 
     if (scroll >= 80){
         let block2 = document.querySelector('.block2');
@@ -111,8 +112,8 @@ let dropStyle = {
 }
 window.addEventListener('scroll', ()=>{
     let scroll = document.documentElement.scrollTop;
-    if(scroll / 5 >= 150){
+    if(scroll / 8 >= 150){
         let showScroll = document.documentElement.scrollTop;
-        drop.style.width = `${showScroll / 5}px`;
+        drop.style.width = `${showScroll / 8}px`;
     }
 });
